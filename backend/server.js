@@ -3,6 +3,10 @@ const bodyParser = require("body-parser")
 const cors = require("cors")
 const mongoose = require("mongoose")
 
+//add new dependancy for allowto access .env file
+const dotenv = require("dotenv").config();
+
+
 
 
 
@@ -21,14 +25,6 @@ app.get("/api/user",(req,res)=>{
 })
 
 
-
-mongoose.connect("mongodb+srv://it21835278:1HQKXAivL1YCMcPb@cluster0.re4imgg.mongodb.net/learn-nodejs?retryWrites=true&w=majority")
-
-
-
-app.listen(5001,()=>{
-    console.log("Server run 😁🔥");
-})
 
 
 const PORT = process.env.PORT || 5000
